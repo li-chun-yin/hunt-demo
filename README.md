@@ -1,7 +1,7 @@
 hunt-demo
 ============================================
 
-* 本项目是基于[hunt-skeleton](https://github.com/huntlabs/hunt-skeleton.git)，构建的Dlang Hunt-Framkwork 演示程序。包含了以下功能模块：
+* 本项目是基于[hunt-skeleton](https://github.com/huntlabs/hunt-skeleton.git)，构建的[Dlang](https://dlang.org/)[Hunt-Framkwork](https://github.com/huntlabs/hunt-framework-docs)演示程序。包含了以下功能模块：
     
     * 基本的数据增删该查
     
