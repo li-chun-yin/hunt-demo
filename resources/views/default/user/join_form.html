@@ -1,0 +1,39 @@
+{% include "../header.html" %}
+
+<div id="content">
+    <div class="container">
+        <p>
+            <form action="/user/add" method="post">
+                <div><label>username:</label><input type="text" name="username" /></div>            
+                <div><label>password:</label><input type="password" name="password" /></div>
+                <div><label>email:</label><input type="email" name="email" /></div>
+                <button type="button" id="formButton">submit</button>
+            </form>
+            <script type="text/javascript">
+                $('#formButton').click(function(){
+                    var $form    = $(this).closest('form');
+                    console.log($form);
+                    $.post($form.prop('action'), $form.serialize(), function(json){
+                        
+                        if(json.code > 0)
+                        {
+                            return alert('error:' + json.message);
+                        }
+
+                        if(confirm("是否现在登录?"))
+                        {
+                            location.href="/user/login-form";
+                        }
+                        else
+                        {
+                            location.href="/";
+                        }
+
+                    });
+                });
+            </script>
+        </p>
+    </div>
+</div>
+
+{% include "../footer.html" %}

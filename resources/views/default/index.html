@@ -1,0 +1,23 @@
+{% include "header.html" %}
+
+<div id="content">
+    <div class="container">
+        <p>Hunt is a high-level dlang Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performance Web applications quickly and easily. </p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <button type="submit">submit</button>
+        </form>
+        {% if session_username %}
+            <p>
+                current username:{{ session_username }}
+            </p>
+        {% else %}
+            <p>
+                <a href="/user/join">{{ trans("USER_JOIN") }}</a>            
+                <a href="/user/login-form">{{ trans("USER_LOGIN") }}</a>
+            </p>
+        {% endif %}
+    </div>
+</div>
+
+{% include "footer.html" %}

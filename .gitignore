@@ -1,0 +1,15 @@
+hunt-skeleton
+.dub
+.DS_Store
+docs.json
+__dummy.html
+*.o
+*.obj
+dub.selections.json
+dub.userprefs
+dub.*.sdl
+hunt-skeleton-*
+.idea
+*.iml
+huntdemo
+logs/

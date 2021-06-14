@@ -1,0 +1,7 @@
+name "huntdemo"
+description "An application based on Hunt Framework."
+copyright "Copyright (c) 2021 李春寅"
+homepage "https://www.licy.top"
+license "Apache-2.0"
+targetType "executable"
+dependency "hunt-framework" version="~>3.4.4"
