@@ -2,6 +2,7 @@ module app.controller.IndexController;
 
 import hunt.framework;
 import app.message.ResultMessage;
+import app.exception.MessageException;
 
 /**
  *
@@ -21,7 +22,7 @@ class IndexController : Controller
     Response options()
     {
         auto resultMessage = new ResultMessage;
-        resultMessage.code = 20000;
+        resultMessage.code = CODE.SUCCESS;
         resultMessage.message = "ok";
         return new JsonResponse(resultMessage);
     }

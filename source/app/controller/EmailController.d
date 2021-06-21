@@ -56,11 +56,19 @@ class EmailController : Controller
             ushort port = conf.mail.smtp.port;
             string user = conf.mail.smtp.user;
             string password = conf.mail.smtp.password;
-            auto smtp = SMTP(format("smtp://%s", host));
+            SMTP smtp;
+            if(protocol == "ssl")
+            {
+                smtp = SMTP(format("smtps://%s:%d", host, port));
+            }
+            else
+            {
+                smtp = SMTP(format("smtp://%s:%d", host, port));
+            }
             smtp.setAuthentication(user, password);
             smtp.mailTo(captcha.to);
             smtp.mailFrom(user);
-            smtp.message(format("Subject:test\r\n\r\nyour captcha is %s", captcha.code));
+            smtp.message(format("Subject:hun-demo login captcha\r\n\r\nyour captcha is %s", captcha.code));
             smtp.perform();
             
             resultMessage.code = CODE.SUCCESS;

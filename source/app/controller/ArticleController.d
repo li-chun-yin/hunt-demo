@@ -42,7 +42,7 @@ class ArticleController : Controller
                 condition = condition.append(" AND create_user='"~user_id ~"'");   
             }
             
-            Pageable pageable =  new Pageable(page - 1, limit);
+            Pageable pageable =  new Pageable(page - 1, limit, "seq", OrderBy.DESC);
 
             auto paginator = articleRepository.findAll(condition, pageable);
 
