@@ -12,10 +12,9 @@ class IndexController : Controller
     mixin MakeController;
 
     @Action
-    string index()
+    Response index()
     {
-        view.setTemplatePath(config().staticfiles.location);
-        return view.render("index");
+        return new RedirectResponse(request(), "/index.html");
     }
 
     @Action
