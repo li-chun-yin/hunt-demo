@@ -13,3 +13,5 @@ hunt-skeleton-*
 *.iml
 huntdemo
 logs/
+attachments/*
+config/application.conf
