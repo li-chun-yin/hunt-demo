@@ -31,11 +31,3 @@ git clone https://github.com/li-chun-yin/hunt-demo.git
 cd hunt-demo
 dub run
 ```
-
-示例程序
----------------------------------------------------------------------------
-* 扫一扫或用浏览器访问url: 
-
-  ![Image text](./demo_qrcode.png)
-
-  http://hunt-demo.licy.top
